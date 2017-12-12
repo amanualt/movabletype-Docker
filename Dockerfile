@@ -9,6 +9,11 @@ RUN yum install -y php perl gcc \
           zip \
           wget \
           git \
+          cpan \
+          make \
+          perl-HTML-Parser \
+          perl-Digest-MD5 \
+          perl-DBD-MySQL \
           perl-Net-SSLeay.x86_64 \
           perl-XML-LibXML.x86_64 \
           perl-GD.x86_64 \
@@ -19,7 +24,6 @@ RUN yum install -y php perl gcc \
 
 ADD httpd.conf /etc/httpd/conf/httpd.conf
 RUN mkdir -p /data/MT
-RUN yum install cpan make perl-HTML-Parser perl-Digest-MD5 perl-DBD-MySQL -y
 RUN curl -L http://cpanmin.us | perl - App::cpanminus
 RUN cpanm CGI Image::Size CGI::Cookie LWP::UserAgent IO::Pty \
           IPC::Run \
