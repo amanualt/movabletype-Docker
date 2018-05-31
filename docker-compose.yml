@@ -7,7 +7,7 @@ services:
     volumes:
      - "./MT-6.3.5:/var/www/html"
     ports:
-      - "8081:80"
+      - "80:80"
     links:
      - "db:db"
 
@@ -15,7 +15,7 @@ services:
     image: mysql:5.6
     container_name: db
     ports:
-      - "3307:3306"
+      - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
     restart: always
