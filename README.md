@@ -8,7 +8,7 @@ All tags: https://github.com/movabletype/movabletype/releases
 
 ## installation
 
-`git clone https://github.com/om3rcitak/movabletype-Docker`
+`git clone https://github.com/amanualt/movabletype-Docker.git`
 
 `cd movabletype-Docker`
 
