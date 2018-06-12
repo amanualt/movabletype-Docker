@@ -12,6 +12,12 @@ All tags: https://github.com/movabletype/movabletype/releases
 
 `cd movabletype-Docker`
 
-`wget -c https://codeload.github.com/movabletype/movabletype/zip/mt6.3.5`
+`git clone https://github.com/movabletype/movabletype.git`
+
+`cd movabletype`
+
+`git checkout tags/mt6.3.5 && cd ..`
+
+`mv movabletype/* movabletype/.* MT-6.3.5/`
 
 `docker-compose up`
