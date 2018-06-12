@@ -45,7 +45,6 @@ RUN cpanm CGI Image::Size CGI::Cookie LWP::UserAgent IO::Pty \
 
 RUN cpanm DBD::SQLite && cpanm --force DBD::SQLite2
 RUN chown -R apache:apache /data/MT/
-WORKDIR /data/MT
 ENV PERL5LIB /var/www/html/local/lib/perl5
 
 RUN chown -R apache:apache /var/www/html/
