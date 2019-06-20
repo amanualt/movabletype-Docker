@@ -21,3 +21,5 @@ All tags: https://github.com/movabletype/movabletype/releases
 `mv movabletype/* movabletype/.* MT-6.3.5/`
 
 `docker-compose up`
+
+#
