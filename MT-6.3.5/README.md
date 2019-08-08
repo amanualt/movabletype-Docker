@@ -1,1 +1,0 @@
-# Patse File (Movabletype)

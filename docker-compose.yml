@@ -5,9 +5,9 @@ services:
     build: .
     container_name: app
     volumes:
-     - "./MT-6.3.5:/var/www/html"
+     - "./movabletype:/var/www/html"
     ports:
-      - "80:80"
+     - "80:80"
     links:
      - "db:db"
 

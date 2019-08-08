@@ -41,14 +41,21 @@ RUN cpanm CGI Image::Size CGI::Cookie LWP::UserAgent IO::Pty \
           Crypt::DSA \
           YAML::Syck \
           XMLRPC::Transport::HTTP::Plack \
-          XML::SAX::ExpatXS
+          XML::SAX::ExpatXS \
+          DBI \
+          Image::Size \
+          CGI::Cookie\
+          HTML::Entities
 
 RUN cpanm DBD::SQLite && cpanm --force DBD::SQLite2
 RUN chown -R apache:apache /data/MT/
 ENV PERL5LIB /var/www/html/local/lib/perl5
 
+RUN COPY movabletype /var/www/html
 RUN chown -R apache:apache /var/www/html/
 RUN chmod -R 755 /var/www/html
+RUN chmod -R 777 /var/www/html/mt-static/support
+
 EXPOSE 80
 
 CMD ["httpd", "-DFOREGROUND"]

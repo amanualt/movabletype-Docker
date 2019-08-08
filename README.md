@@ -12,14 +12,16 @@ All tags: https://github.com/movabletype/movabletype/releases
 
 `cd movabletype-Docker`
 
+`rm -rf movabletype`
+
 `git clone https://github.com/movabletype/movabletype.git`
 
-`cd movabletype`
+`docker-compose up -d --build`
 
-`git checkout tags/mt6.3.5 && cd ..`
+# Access
 
-`mv movabletype/* movabletype/.* MT-6.3.5/`
+use `localhost` or `127.0.0.1`
 
-`docker-compose up`
+# cek ip and port database
 
-#
+`docker inspect db`
